@@ -1,0 +1,17 @@
+#Use \n for a new line. Do not use {enter} at any point, keep all text for the same tab on the same line.
+ 
+#Tab Names
+gui.tab1.name=Rules
+gui.tab2.name=Announcements
+gui.tab3.name=Moderators
+gui.tab4.name=Other Servers
+ 
+#Tab Text
+gui.tab1.text=- Use common sense and basic courtesy when dealing with other players. (Generic don't be a dick rule)\n\n- Please keep all branch mines away from spawn village, as such keep both x and z coords in 4 digits this will mean we will have a 1k block area around spawn safe from branch mines.\n\n- You are not allowed to use any type of quarry in the overworld.\n\n- Please don't use Buildcraft pumps in the nether because they can create server lag.\n\n- If its a player placed chest and not yours, don't help yourself unless there is indication that it's ok to do so.\n\n- Huge factory builds and large scale automation should be kept to Single Player worlds, they don't tend to be server friendly.\n\n- We have the Rec Status Mod, please use it and be respectful of people currently streaming and/or recording. (Command: /rec )\n\n- The nature of modded minecraft means that there will often be bugs and you will lose items due to them. My policy is no refunds (I would end up spending all my time doing that)\n\n- Please show some respect to how other people want to play, do NOT get in the faces of people that are trying to stream/record/go about their business. (This includes 'taking over' their build)
+gui.tab2.text=- (15/03/15) We now have the Server Notice Board Mod by Jake_Evans, to access it again use /rules in chat! Here you will find all the latest announcements and rules, also other Qmunity information.
+gui.tab3.text=Server Owner: Quetzi\n\nModerators: Zness, Loneztar, Siland, Smithy, Vortalos, DoctorAnguus, Serenejay, Nullvoid, K4unl, Kentben, Ralle, OutpostAntara, Nairobie, Alfwolsen, Pvmsimon
+gui.tab4.text=Teamspeak 3: ts.qmunity.co.uk (If you don't have your sub badge ask a mod for it, Also do not try to 'impersonate' someone else on the Teamspeak server, you will have TS rights removed as a result.)\n\nMinecraft Vanilla: vanilla.qmunity.co.uk\nMinecraft Creative: creative.qmunity.co.uk\nGary's Mod Prop Hunt: gmod.qmuntiy.co.uk\nGary's Mod TTT: <Comming Soon>
+
+#Chat message
+chat.message1=§5The Qmunity group server rules are available in game!
+chat.message2=§5Type /rules to view the rules

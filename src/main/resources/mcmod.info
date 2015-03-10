@@ -1,0 +1,16 @@
+[
+{
+  "modid": "serverNoticeBoard",
+  "name": "Qmunity-Notice Board",
+  "description": "Mod made for the Qmunity sub server pack.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Jake_Evans"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
