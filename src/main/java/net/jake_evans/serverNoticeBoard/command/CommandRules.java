@@ -11,11 +11,11 @@ import java.util.List;
 /**
  * Created by Jake on 23/02/2015.
  */
-public class CommandBoard implements ICommand {
+public class CommandRules implements ICommand {
 
     private final List aliases;
 
-    public CommandBoard() {
+    public CommandRules() {
         aliases = new ArrayList();
         aliases.add("rules");
     }

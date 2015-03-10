@@ -37,6 +37,22 @@ public class NoticeBoardGUI extends GuiScreen {
         return StatCollector.translateToLocal(key);
     }
 
+    public static int computeGuiScale() {
+        Minecraft mc = Minecraft.getMinecraft();
+        int scaleFactor = 1;
+
+        int scale = mc.gameSettings.guiScale;
+
+        if (scale == 0) {
+            scale = 1000;
+        }
+
+        while (scaleFactor < scale && mc.displayWidth / (scaleFactor + 1) >= 320 && mc.displayHeight / (scaleFactor + 1) >= 240) {
+            ++scaleFactor;
+        }
+        return scaleFactor;
+    }
+
     @Override
     public void drawScreen(int x, int y, float ticks) {
         int guiX = (width - guiWidth) / 2;
@@ -100,12 +116,11 @@ public class NoticeBoardGUI extends GuiScreen {
         }
 
 
+        drawTexturedModalRect(guiX + 92, guiY - 20, 195, 79, 18, 18);
+
         renderItem(Items.written_book, -20, 6);
         renderItem(Items.filled_map, -20, 35);
         renderItem(Items.diamond_sword, -20, 64);
-
-        mc.renderEngine.bindTexture(new ResourceLocation(ServerNoticeBoard.MODID, "textures/gui/noticeBoardGUI.png"));
-        drawTexturedModalRect(guiX + 92, guiY - 20, 195, 79, 18, 18);
 
         super.drawScreen(x, y, ticks);
     }
@@ -175,26 +190,10 @@ public class NoticeBoardGUI extends GuiScreen {
 
         GL11.glPushMatrix();
         GL11.glColor4f(1, 1, 1, 1);
-        IIcon iicon1 = stack.getIconIndex();
+        IIcon iicon = stack.getIconIndex();
         this.mc.renderEngine.bindTexture(TextureMap.locationItemsTexture);
-        this.drawTexturedModelRectFromIcon(guiX + x, guiY + y, iicon1, 16, 16);
+        this.drawTexturedModelRectFromIcon(guiX + x, guiY + y, iicon, 16, 16);
         GL11.glPopMatrix();
-    }
-
-    public static int computeGuiScale() {
-        Minecraft mc = Minecraft.getMinecraft();
-        int scaleFactor = 1;
-
-        int k = mc.gameSettings.guiScale;
-
-        if (k == 0) {
-            k = 1000;
-        }
-
-        while (scaleFactor < k && mc.displayWidth / (scaleFactor + 1) >= 320 && mc.displayHeight / (scaleFactor + 1) >= 240) {
-            ++scaleFactor;
-        }
-        return scaleFactor;
     }
 
 }

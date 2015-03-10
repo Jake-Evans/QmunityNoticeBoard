@@ -6,7 +6,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import net.jake_evans.serverNoticeBoard.command.CommandBoard;
+import net.jake_evans.serverNoticeBoard.command.CommandRules;
 import net.jake_evans.serverNoticeBoard.handler.ConnectionHandler;
 import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.common.config.Configuration;
@@ -14,14 +14,12 @@ import net.minecraftforge.common.config.Property;
 
 @Mod(modid = ServerNoticeBoard.MODID, name = ServerNoticeBoard.NAME, version = ServerNoticeBoard.VERSION)
 public class ServerNoticeBoard {
-    @Instance(ServerNoticeBoard.MODID)
-
-    public static ServerNoticeBoard instance = new ServerNoticeBoard();
-
     public static final String MODID = "servernoticeboard";
     public static final String NAME = "Server Notice Board";
     public static final String VERSION = "0.0.34";
+    @Instance(ServerNoticeBoard.MODID)
 
+    public static ServerNoticeBoard instance = new ServerNoticeBoard();
     public static Property shouldShow;
     public static Configuration config;
 
@@ -33,7 +31,7 @@ public class ServerNoticeBoard {
         shouldShow = config.get(Configuration.CATEGORY_GENERAL, "shouldShow", "true");
         config.save();
 
-        ClientCommandHandler.instance.registerCommand(new CommandBoard());
+        ClientCommandHandler.instance.registerCommand(new CommandRules());
     }
 
     @EventHandler
