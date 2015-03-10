@@ -12,13 +12,13 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 
 public class DelayedGuiDisplayTicker {
-    private int delayTicks;
-    private Minecraft mcClient;
+    private int ticks;
+    private Minecraft mc;
     private GuiScreen screen;
 
-    public DelayedGuiDisplayTicker(int delayTicks, GuiScreen screen) {
-        this.delayTicks = delayTicks;
-        this.mcClient = FMLClientHandler.instance().getClient();
+    public DelayedGuiDisplayTicker(int ticks, GuiScreen screen) {
+        this.ticks = ticks;
+        this.mc = FMLClientHandler.instance().getClient();
         this.screen = screen;
         FMLCommonHandler.instance().bus().register(this);
     }
@@ -28,8 +28,8 @@ public class DelayedGuiDisplayTicker {
         if (event.phase.equals(TickEvent.Phase.START))
             return;
 
-        if (--delayTicks <= 0) {
-            mcClient.displayGuiScreen(screen);
+        if (--ticks <= 0) {
+            mc.displayGuiScreen(screen);
             FMLCommonHandler.instance().bus().unregister(this);
         }
     }

@@ -29,6 +29,7 @@ public class ServerNoticeBoard {
     public void preinit(FMLPreInitializationEvent event) {
         config = new Configuration(event.getSuggestedConfigurationFile());
         config.load();
+        //TODO: Change to a boolean
         shouldShow = config.get(Configuration.CATEGORY_GENERAL, "shouldShow", "true");
         config.save();
 
