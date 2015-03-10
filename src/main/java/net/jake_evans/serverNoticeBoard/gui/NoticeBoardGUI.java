@@ -115,12 +115,12 @@ public class NoticeBoardGUI extends GuiScreen {
             GL11.glDisable(GL11.GL_SCISSOR_TEST);
         }
 
-
-        drawTexturedModalRect(guiX + 92, guiY - 20, 195, 79, 18, 18);
-
         renderItem(Items.written_book, -20, 6);
         renderItem(Items.filled_map, -20, 35);
         renderItem(Items.diamond_sword, -20, 64);
+
+        mc.renderEngine.bindTexture(new ResourceLocation(ServerNoticeBoard.MODID, "textures/gui/noticeBoardGUI.png"));
+        drawTexturedModalRect(guiX + 92, guiY - 20, 195, 79, 18, 18);
 
         super.drawScreen(x, y, ticks);
     }
