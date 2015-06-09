@@ -1,4 +1,4 @@
-package net.jake_evans.serverNoticeBoard.common.handler;
+package net.jake_evans.serverNoticeBoard.client.handler;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.network.FMLNetworkEvent.ClientConnectedToServerEvent;
@@ -18,7 +18,6 @@ public class ConnectionHandler {
 
         if (ConfigHandler.shouldShow) {
             Minecraft.getMinecraft().ingameGUI.getChatGUI().printChatMessage(new ChatComponentTranslation("chat.message1"));
-            ConfigHandler.toggleShow();
         }
         ServerNoticeBoard.proxy.network.sendToServer(new GetConfigMessage());
         Minecraft.getMinecraft().ingameGUI.getChatGUI().printChatMessage(new ChatComponentTranslation("chat.message2"));

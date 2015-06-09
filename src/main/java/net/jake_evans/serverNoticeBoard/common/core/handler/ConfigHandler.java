@@ -60,10 +60,4 @@ public final class ConfigHandler {
 
         config.save();
     }
-
-    public static void toggleShow() {
-        Property propShouldShow = config.get(CATEGORY_CLIENT, "should_show", shouldShow);
-        propShouldShow.set(false);
-        config.save();
-    }
 }

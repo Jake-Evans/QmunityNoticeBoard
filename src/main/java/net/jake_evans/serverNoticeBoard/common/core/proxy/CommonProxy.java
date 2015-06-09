@@ -23,7 +23,7 @@ public class CommonProxy {
 
     public static SimpleNetworkWrapper network;
 
-    public static void preinit(FMLPreInitializationEvent event) {
+    public void preinit(FMLPreInitializationEvent event) {
         ConfigHandler.load(event.getSuggestedConfigurationFile());
 
         network = NetworkRegistry.INSTANCE.newSimpleChannel(ServerNoticeBoard.MODID);
@@ -32,11 +32,11 @@ public class CommonProxy {
 
     }
 
-    public static void init(FMLInitializationEvent event) {
+    public void init(FMLInitializationEvent event) {
 
     }
 
-    public static void postinit(FMLPostInitializationEvent event) {
+    public void postinit(FMLPostInitializationEvent event) {
 
     }
 }

@@ -4,8 +4,8 @@ import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.jake_evans.serverNoticeBoard.client.command.CommandRules;
+import net.jake_evans.serverNoticeBoard.client.handler.ConnectionHandler;
 import net.jake_evans.serverNoticeBoard.common.core.proxy.CommonProxy;
-import net.jake_evans.serverNoticeBoard.common.handler.ConnectionHandler;
 import net.minecraftforge.client.ClientCommandHandler;
 
 /**
@@ -13,11 +13,11 @@ import net.minecraftforge.client.ClientCommandHandler;
  */
 public class ClientProxy extends CommonProxy {
 
-    public static void preinit(FMLPreInitializationEvent event) {
+    public void preinit(FMLPreInitializationEvent event) {
         ClientCommandHandler.instance.registerCommand(new CommandRules());
     }
 
-    public static void init(FMLInitializationEvent event) {
+    public void init(FMLInitializationEvent event) {
         FMLCommonHandler.instance().bus().register(new ConnectionHandler());
     }
 }
