@@ -1,6 +1,7 @@
-package net.jake_evans.serverNoticeBoard.gui;
+package net.jake_evans.serverNoticeBoard.client.gui;
 
-import net.jake_evans.serverNoticeBoard.ServerNoticeBoard;
+import net.jake_evans.serverNoticeBoard.common.ServerNoticeBoard;
+import net.jake_evans.serverNoticeBoard.common.core.handler.ConfigHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.renderer.texture.TextureMap;
@@ -71,8 +72,8 @@ public class NoticeBoardGUI extends GuiScreen {
             drawTexturedModalRect(guiX + 29, guiY - 26, 223, 32, tab1Width, 30);
             drawTexturedModalRect(guiX + 58, guiY - 26, 223, 32, tab1Width, 30);
             drawTexturedModalRect(guiX + 87, guiY - 26, 223, 32, tab1Width, 30);
-            fontRendererObj.drawString(localize("gui.tab1.name"), guiX + 8, guiY + 8, 0x373737);
-            String tab1text = localize("gui.tab1.text").replace("\\n", "\n");
+            fontRendererObj.drawString(ConfigHandler.tab1Title, guiX + 8, guiY + 8, 0x373737);
+            String tab1text = ConfigHandler.tab1Text.replace("\\n", "\n");
             GL11.glEnable(GL11.GL_SCISSOR_TEST);
             GL11.glScissor((guiX + 10) * computeGuiScale(), (guiY + 9) * computeGuiScale(), 162 * computeGuiScale(), 109 * computeGuiScale());
             fontRendererObj.drawSplitString(tab1text, guiX + 10, tabY, 158, 0x00000);
@@ -83,8 +84,8 @@ public class NoticeBoardGUI extends GuiScreen {
             drawTexturedModalRect(guiX + 29, guiY - 28, 223, 0, tab1Width, tab1Height);
             drawTexturedModalRect(guiX + 58, guiY - 26, 223, 32, tab1Width, 30);
             drawTexturedModalRect(guiX + 87, guiY - 26, 223, 32, tab1Width, 30);
-            fontRendererObj.drawString(localize("gui.tab2.name"), guiX + 8, guiY + 8, 0x373737);
-            String tab2text = localize("gui.tab2.text").replace("\\n", "\n");
+            fontRendererObj.drawString(ConfigHandler.tab2Title, guiX + 8, guiY + 8, 0x373737);
+            String tab2text = ConfigHandler.tab2Text.replace("\\n", "\n");
             GL11.glEnable(GL11.GL_SCISSOR_TEST);
             GL11.glScissor((guiX + 10) * computeGuiScale(), (guiY + 9) * computeGuiScale(), 162 * computeGuiScale(), 109 * computeGuiScale());
             fontRendererObj.drawSplitString(tab2text, guiX + 10, tabY, 158, 0x00000);
@@ -95,8 +96,8 @@ public class NoticeBoardGUI extends GuiScreen {
             drawTexturedModalRect(guiX + 29, guiY - 26, 223, 32, tab1Width, 30);
             drawTexturedModalRect(guiX + 58, guiY - 28, 223, 0, tab1Width, tab1Height);
             drawTexturedModalRect(guiX + 87, guiY - 26, 223, 32, tab1Width, 30);
-            fontRendererObj.drawString(localize("gui.tab3.name"), guiX + 8, guiY + 8, 0x373737);
-            String tab2text = localize("gui.tab3.text").replace("\\n", "\n");
+            fontRendererObj.drawString(ConfigHandler.tab3Title, guiX + 8, guiY + 8, 0x373737);
+            String tab2text = ConfigHandler.tab3Text.replace("\\n", "\n");
             GL11.glEnable(GL11.GL_SCISSOR_TEST);
             GL11.glScissor((guiX + 10) * computeGuiScale(), (guiY + 9) * computeGuiScale(), 162 * computeGuiScale(), 109 * computeGuiScale());
             fontRendererObj.drawSplitString(tab2text, guiX + 10, tabY, 158, 0x00000);
@@ -107,8 +108,8 @@ public class NoticeBoardGUI extends GuiScreen {
             drawTexturedModalRect(guiX + 29, guiY - 26, 223, 32, tab1Width, 30);
             drawTexturedModalRect(guiX + 58, guiY - 26, 223, 32, tab1Width, 30);
             drawTexturedModalRect(guiX + 87, guiY - 28, 223, 0, tab1Width, tab1Height);
-            fontRendererObj.drawString(localize("gui.tab4.name"), guiX + 8, guiY + 8, 0x373737);
-            String tab2text = localize("gui.tab4.text").replace("\\n", "\n");
+            fontRendererObj.drawString(ConfigHandler.tab4Title, guiX + 8, guiY + 8, 0x373737);
+            String tab2text = ConfigHandler.tab4Text.replace("\\n", "\n");
             GL11.glEnable(GL11.GL_SCISSOR_TEST);
             GL11.glScissor((guiX + 10) * computeGuiScale(), (guiY + 9) * computeGuiScale(), 162 * computeGuiScale(), 109 * computeGuiScale());
             fontRendererObj.drawSplitString(tab2text, guiX + 10, tabY, 158, 0x00000);

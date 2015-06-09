@@ -1,4 +1,4 @@
-package net.jake_evans.serverNoticeBoard.util;
+package net.jake_evans.serverNoticeBoard.client.util;
 
 /**
  * Created by Jake on 28/02/2015.

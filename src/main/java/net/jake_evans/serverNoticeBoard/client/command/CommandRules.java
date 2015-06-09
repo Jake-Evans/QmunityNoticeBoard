@@ -1,7 +1,7 @@
-package net.jake_evans.serverNoticeBoard.command;
+package net.jake_evans.serverNoticeBoard.client.command;
 
-import net.jake_evans.serverNoticeBoard.gui.NoticeBoardGUI;
-import net.jake_evans.serverNoticeBoard.util.DelayedGuiDisplayTicker;
+import net.jake_evans.serverNoticeBoard.client.gui.NoticeBoardGUI;
+import net.jake_evans.serverNoticeBoard.client.util.DelayedGuiDisplayTicker;
 import net.minecraft.command.ICommand;
 import net.minecraft.command.ICommandSender;
 
